@@ -7,12 +7,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="stylesheet" href="fonts.css">
     <link rel="stylesheet" href="style.css">
     <title>Password Check App</title>
 </head>
 
 <body>
     <h1>Password Check</h1>
+    <main class="container">
+        <form>
+            <input type="password" name="passwordOne" id="passworOne">
+            <input type="password" name="passwordTwo" id="passworTwo">
+            <button>Show Passwords</button>
+        </form>
+
+        <section class="errors">
+            <p class="equal has-error">Passwords are equal <span class="valid">✅</span><span class="error">❌</span></p>
+            <p class="lowercase has-error">Lower Case Letters <span class="valid">✅</span><span class="error">❌</span></p>
+            <p class="uppercase has-error">Upper Case Letters <span class="valid">✅</span><span class="error">❌</span></p>
+            <p class="contains-number has-error">Contains Numbers <span class="valid">✅</span><span class="error">❌</span></p>
+            <p class="min-characters has-error">At least 10 characters long <span class="valid">✅</span><span class="error">❌</span></p>
+        </section>
+    </main>
 
     <script src="script.js"></script>
 </body>
