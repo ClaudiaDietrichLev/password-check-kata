@@ -1,16 +1,14 @@
 (function () {
 
-    function init() {
-        initEventListeners();
-    }
-    init();
+    // Init Function
+    initEventListeners();
 
     function initEventListeners() {
         const passwordOneElement = document.querySelector('#passworOne');
         const passwordTwoElement = document.querySelector('#passworTwo');
 
-        passwordOneElement.addEventListener('input', handleInputEvent);
-        passwordTwoElement.addEventListener('input', handleInputEvent);
+        passwordOneElement.addEventListener('input', handlePasswordChangedEvent);
+        passwordTwoElement.addEventListener('input', handlePasswordChangedEvent);
 
         const toggleButton = document.querySelector('form button');
         toggleButton.addEventListener('click', handleTogglePasswordVisibility);
@@ -32,10 +30,9 @@
             passwordTwoElement.type = "password";
         }
 
-
     }
 
-    function handleInputEvent() {
+    function handlePasswordChangedEvent() {
         const passwordTextOne = document.querySelector('#passworOne').value
         const passwordTextTwo = document.querySelector('#passworTwo').value
 
