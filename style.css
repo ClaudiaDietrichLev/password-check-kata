@@ -8,6 +8,10 @@ h1 {
   text-shadow: 2px 2px black;
 }
 
+/*
+  Responsive Layout
+*/
+
 .container {
  display: flex;
  flex-direction: row;
@@ -20,6 +24,10 @@ h1 {
     flex-direction: column;
   }
 }
+
+/*
+  Form
+*/
 
 form {
   align-items: center;
@@ -39,6 +47,9 @@ form button {
   color: white
 }
 
+/*
+  Handle valid/invalid state
+*/
 .errors .has-error .valid,
 .errors :not(.has-error) .error
  {
