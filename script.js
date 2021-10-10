@@ -4,8 +4,8 @@
     initEventListeners();
 
     function initEventListeners() {
-        const passwordOneElement = document.querySelector('#passworOne');
-        const passwordTwoElement = document.querySelector('#passworTwo');
+        const passwordOneElement = document.querySelector('#passwordOne');
+        const passwordTwoElement = document.querySelector('#passwordTwo');
 
         passwordOneElement.addEventListener('input', handlePasswordChangedEvent);
         passwordTwoElement.addEventListener('input', handlePasswordChangedEvent);
@@ -16,8 +16,8 @@
 
     function handleTogglePasswordVisibility() {
         const toggleButton = document.querySelector('form button');
-        const passwordOneElement = document.querySelector('#passworOne');
-        const passwordTwoElement = document.querySelector('#passworTwo');
+        const passwordOneElement = document.querySelector('#passwordOne');
+        const passwordTwoElement = document.querySelector('#passwordTwo');
 
         if (passwordOneElement.type === 'password') {
             toggleButton.textContent = "Hide Passwords";
@@ -33,8 +33,8 @@
     }
 
     function handlePasswordChangedEvent() {
-        const passwordTextOne = document.querySelector('#passworOne').value
-        const passwordTextTwo = document.querySelector('#passworTwo').value
+        const passwordTextOne = document.querySelector('#passwordOne').value
+        const passwordTextTwo = document.querySelector('#passwordTwo').value
 
         if (!checkIsPasswordsEqual(passwordTextOne, passwordTextTwo)) {
             const allErrors = document.querySelectorAll('.errors p');
