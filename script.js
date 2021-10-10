@@ -78,9 +78,7 @@
     }
 
     function checkContainsNumber(password) {
-        // https://stackoverflow.com/a/36077900
-        var regex = /\d/g;
-        return regex.test(password);
+        return password.match(/[0-9]/);
     }
 
     function checkCharacterLenght(password) {
