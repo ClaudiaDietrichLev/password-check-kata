@@ -36,18 +36,13 @@
         const passwordTextOne = document.querySelector('#passwordOne').value
         const passwordTextTwo = document.querySelector('#passwordTwo').value
 
-        if (!checkIsPasswordsEqual(passwordTextOne, passwordTextTwo)) {
-            const allErrors = document.querySelectorAll('.errors p');
-            allErrors.forEach(function (errorElement) {
-                errorElement.classList.add('has-error');
-            })
-        }
-        else {
-            const allErrors = document.querySelectorAll('.errors p');
-            allErrors.forEach(function (errorElement) {
-                errorElement.classList.add('has-error');
-            })
+        // start with all error-state
+        const allErrors = document.querySelectorAll('.errors p');
+        allErrors.forEach(function (errorElement) {
+            errorElement.classList.add('has-error');
+        })
 
+        if (checkIsPasswordsEqual(passwordTextOne, passwordTextTwo)) {
             document.querySelector('.errors .equal').classList.remove('has-error');
 
             if (checkContainsLowerCaseLetter(passwordTextOne)) {
@@ -75,11 +70,11 @@
     }
 
     function checkContainsLowerCaseLetter(password) {
-        return password !== password.toLowerCase();
+        return password.match(/[a-z]/);
     }
 
     function checkContainsUpperCaseLetter(password) {
-        return password !== password.toUpperCase();
+        return password.match(/[A-Z]/);
     }
 
     function checkContainsNumber(password) {
